@@ -77,11 +77,11 @@ public class PlayerMovement : MonoBehaviour
     {
         RopeSegment myConnection = hj.connectedBody.gameObject.GetComponent<RopeSegment>();
         GameObject newSeg = null;
-        if(direction > 0)
+        if (direction > 0)
         {
-            if(myConnection.connectedAbove != null)
+            if (myConnection.connectedAbove != null)
             {
-                if(myConnection.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
+                if (myConnection.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
                 {
                     newSeg = myConnection.connectedAbove;
                 }
@@ -89,12 +89,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if(myConnection.connectedBelow != null)
+            if (myConnection.connectedBelow != null)
             {
                 newSeg = myConnection.connectedBelow;
             }
         }
-        if(newSeg != null)
+        if (newSeg != null)
         {
             transform.position = newSeg.transform.position;
             myConnection.isPlayerAttached = false;
@@ -106,9 +106,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!attached)
         {
-            if(collision.gameObject.tag == "Rope")
+            if (collision.gameObject.tag == "Rope")
             {
-                if(attachedTo != collision.gameObject.transform.parent.gameObject != disregard)
+                if (attachedTo != collision.gameObject.transform.parent.gameObject != disregard)
                 {
                     if (disregard == null || collision.gameObject.transform.parent.gameObject != disregard)
                     {
@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            if (hit.collider != null && hit.transform.gameObject.tag == "Crank")
+            if (hit.collider != null && hit.transform.gameObject.CompareTag("Crank"))
             {
                 if (pulleySelected != hit.transform.gameObject)
                 {

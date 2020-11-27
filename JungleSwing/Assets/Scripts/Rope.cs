@@ -56,10 +56,10 @@ public class Rope : MonoBehaviour
 
     public void removeLink()
     {
-        if (top.gameObject.GetComponent<RopeSegment>().isPlayerAttached)
+/*        if (top.gameObject.GetComponent<RopeSegment>().isPlayerAttached)
         {
             player.Slide(-1);
-        }
+        }*/
         HingeJoint2D newTop = top.gameObject.GetComponent<RopeSegment>().connectedBelow.GetComponent<HingeJoint2D>();
         newTop.connectedBody = hook;
         newTop.gameObject.transform.position = hook.gameObject.transform.position;
