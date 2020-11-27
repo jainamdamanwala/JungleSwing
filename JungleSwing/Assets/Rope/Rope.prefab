@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5130828437211974940}
   m_Layer: 0
   m_Name: bone_2
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.55148655, y: 0.00000015559088}
+  m_ConnectedAnchor: {x: 0.5514858, y: 0.00000015559067}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -88,7 +88,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 5130828437276453138}
   m_Layer: 0
   m_Name: bone_12
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.70484376, y: 0.00000086806665}
+  m_ConnectedAnchor: {x: 0.7048437, y: 0.00000007582044}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -192,7 +192,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 5130828437441353263}
   m_Layer: 0
   m_Name: bone_5
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,7 +277,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.67421275, y: -0.000000051062745}
+  m_ConnectedAnchor: {x: 0.6742132, y: 0.0000003543445}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -296,7 +296,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -435,8 +435,8 @@ MonoBehaviour:
   - {fileID: 5130828438437165105}
   - {fileID: 5130828437276453151}
   m_Bounds:
-    m_Center: {x: -0.0043400526, y: -0.015000343, z: 0}
-    m_Extent: {x: 0.98066, y: 4.3900003, z: 0}
+    m_Center: {x: -0.004339814, y: -0.01500082, z: 0}
+    m_Extent: {x: 0.9806598, y: 4.3899994, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5130828437835201711
@@ -507,7 +507,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -16.61844, y: 4.732517}
+  m_ConnectedAnchor: {x: 2.9669714, y: 5.0371847}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 5130828437988567080}
   m_Layer: 0
   m_Name: bone_10
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -585,7 +585,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.704844, y: 0.0000008386669}
+  m_ConnectedAnchor: {x: 0.704844, y: 0.000000047968033}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -604,7 +604,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 5130828438144433008}
   m_Layer: 0
   m_Name: bone_3
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +689,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.73531616, y: 0.00000020745475}
+  m_ConnectedAnchor: {x: 0.735317, y: 0.00000020745496}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -708,7 +708,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 5130828438151032244}
   m_Layer: 0
   m_Name: bone_8
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,7 +793,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.7814227, y: -0.0000012069373}
+  m_ConnectedAnchor: {x: 0.7814225, y: -0.000000023210333}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -812,7 +812,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 5130828438286912297}
   m_Layer: 0
   m_Name: bone_9
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -897,7 +897,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.7965919, y: -0.00000006014102}
+  m_ConnectedAnchor: {x: 0.79659206, y: 0.00000033598207}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -916,7 +916,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 5130828438437165108}
   m_Layer: 0
   m_Name: bone_11
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1001,7 +1001,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.8120553, y: -0.00000043016493}
+  m_ConnectedAnchor: {x: 0.8120553, y: -0.00000003404183}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1020,7 +1020,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   - component: {fileID: 5130828438661934727}
   m_Layer: 0
   m_Name: bone_7
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1105,7 +1105,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.6740403, y: -0.000000050888627}
+  m_ConnectedAnchor: {x: 0.6740403, y: 0.00000034523447}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1124,7 +1124,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 5130828438741656043}
   m_Layer: 0
   m_Name: bone_4
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1209,7 +1209,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.7046784, y: 0.00000019881091}
+  m_ConnectedAnchor: {x: 0.70467764, y: 0.0000001988107}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1228,7 +1228,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1258,7 +1258,7 @@ GameObject:
   - component: {fileID: 5130828438965899110}
   m_Layer: 0
   m_Name: bone_1
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1332,7 +1332,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 5130828439058007222}
   m_Layer: 0
   m_Name: bone_6
-  m_TagString: Rope
+  m_TagString: Rope2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1417,7 +1417,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.7814208, y: 0.00000028471342}
+  m_ConnectedAnchor: {x: 0.7814208, y: -0.0000001114096}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1436,7 +1436,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

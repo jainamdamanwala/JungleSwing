@@ -1,14 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+
 
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     private HingeJoint2D hj;
-    public float speed;
+    public float Ropespeed = 10f;
+    public float Groundspeed = 10f;
+    public float RopeJumpForce;
+    public float GroundJumpForce;
 
-    public bool attached;
+    public bool isGrounded;
+    public Transform groundChecker;
+    public float checkRadius;
+    public LayerMask ground;
+
+    private float dirX;
+
+    public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
 
@@ -25,22 +37,33 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckKeyboardInputs();
         CheckPulleyInputs();
+
+        isGrounded = Physics2D.OverlapCircle(groundChecker.position, checkRadius, ground);
     }
 
     void CheckKeyboardInputs()
     {
-        if (Input.GetKey("a"))
+        dirX = CrossPlatformInputManager.GetAxis("Horizontal");
+        if (dirX < 0)
         {
             if (attached)
             {
-                rb.AddRelativeForce(new Vector3(-1, 0, 0) * speed);
+                rb.AddRelativeForce(new Vector3(-1, 0, 0) * Ropespeed * Time.deltaTime);
+            }
+            else
+            {
+                rb.AddRelativeForce(new Vector3(-1, 0, 0) * Groundspeed * Time.deltaTime);
             }
         }
-        if (Input.GetKey("d"))
+        if (dirX > 0)
         {
             if (attached)
             {
-                rb.AddRelativeForce(new Vector3(1, 0, 0) * speed);
+                rb.AddRelativeForce(new Vector3(1, 0, 0) * Ropespeed * Time.deltaTime);
+            }
+            else
+            {
+                rb.AddRelativeForce(new Vector3(1, 0, 0) * Groundspeed * Time.deltaTime);
             }
         }
         if (Input.GetKeyDown("w") && attached)
@@ -51,9 +74,14 @@ public class PlayerMovement : MonoBehaviour
         {
             Slide(-1);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (CrossPlatformInputManager.GetButtonDown("Jump") && attached)
         {
+            rb.AddRelativeForce(new Vector3(0, RopeJumpForce, 0) * (Ropespeed) * Time.deltaTime);
             Detach();
+        }
+        if(CrossPlatformInputManager.GetButtonDown("Jump") && !attached && isGrounded)
+        {
+            rb.AddRelativeForce(new Vector3(0, GroundJumpForce, 0) * Groundspeed * Time.deltaTime);
         }
     }
 
@@ -62,7 +90,8 @@ public class PlayerMovement : MonoBehaviour
         ropeBone.gameObject.GetComponent<RopeSegment>().isPlayerAttached = true;
         hj.connectedBody = ropeBone;
         hj.enabled = true;
-        attached = ropeBone.gameObject.transform.parent;
+        attached = true;
+        attachedTo = ropeBone.gameObject.transform.parent;
     }
 
     void Detach()
@@ -108,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collision.gameObject.tag == "Rope")
             {
-                if (attachedTo != collision.gameObject.transform.parent.gameObject != disregard)
+                if (attachedTo != collision.gameObject.transform.parent)
                 {
                     if (disregard == null || collision.gameObject.transform.parent.gameObject != disregard)
                     {
@@ -117,6 +146,12 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+/*        if(collision.gameObject.tag == "Rope2")
+        {
+            Debug.Log(collision.gameObject);
+            this.transform.parent = collision.transform;
+            this.transform.position = transform.parent.position;
+        }*/
     }
 
     void CheckPulleyInputs()

@@ -14,6 +14,12 @@ TextureImporter:
   - first:
       213: -5961714951130205708
     second: Rope2_3
+  - first:
+      213: -8877765928746891824
+    second: Rope2_4
+  - first:
+      213: 2287075127500713609
+    second: Rope2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -177,9 +183,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 659
+        y: 786
         width: 197
-        height: 207
+        height: 95
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,9 +204,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 394
+        y: 670
         width: 197
-        height: 266
+        height: 114
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,6 +258,48 @@ TextureImporter:
       bones: []
       spriteID: 4f1bfb5a6dbb34da0800000000000000
       internalID: -5961714951130205708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rope2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 197
+        height: 130
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5c9f99ce6dbc480800000000000000
+      internalID: -8877765928746891824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rope2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 398
+        width: 197
+        height: 138
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eaf4506b25dbf10800000000000000
+      internalID: 2287075127500713609
       vertices: []
       indices: 
       edges: []
