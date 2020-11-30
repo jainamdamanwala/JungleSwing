@@ -7,6 +7,8 @@ TagManager:
   - Rope
   - Crank
   - Rope2
+  - Runic
+  - BoomerRang
   layers:
   - Default
   - TransparentFX

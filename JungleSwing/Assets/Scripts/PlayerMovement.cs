@@ -6,6 +6,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
 {
+    Animator anim;
+
     Rigidbody2D rb;
     private HingeJoint2D hj;
     public float Ropespeed = 10f;
@@ -13,12 +15,17 @@ public class PlayerMovement : MonoBehaviour
     public float RopeJumpForce;
     public float GroundJumpForce;
 
+
+    public int Runic;
+    public int boomerRang;
+
     public bool isGrounded;
     public Transform groundChecker;
     public float checkRadius;
     public LayerMask ground;
 
     private float dirX;
+    private bool facingRight;
 
     public bool attached = false;
     public Transform attachedTo;
@@ -30,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         hj = GetComponent<HingeJoint2D>();
+        anim = GetComponent<Animator>();
+        LoadData();
     }
 
     // Update is called once per frame
@@ -37,8 +46,10 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckKeyboardInputs();
         CheckPulleyInputs();
-
         isGrounded = Physics2D.OverlapCircle(groundChecker.position, checkRadius, ground);
+        anim.SetFloat("dirX", dirX);
+        anim.SetBool("isGrounded", isGrounded);
+        SaveSystem.SavePlayer(this);
     }
 
     void CheckKeyboardInputs()
@@ -48,40 +59,40 @@ public class PlayerMovement : MonoBehaviour
         {
             if (attached)
             {
-                rb.AddRelativeForce(new Vector3(-1, 0, 0) * Ropespeed * Time.deltaTime);
+                rb.velocity = new Vector2(dirX * Ropespeed, rb.velocity.y);
             }
             else
             {
-                rb.AddRelativeForce(new Vector3(-1, 0, 0) * Groundspeed * Time.deltaTime);
+                rb.velocity = new Vector2(dirX * Groundspeed, rb.velocity.y);
             }
         }
         if (dirX > 0)
         {
             if (attached)
             {
-                rb.AddRelativeForce(new Vector3(1, 0, 0) * Ropespeed * Time.deltaTime);
+                rb.velocity = new Vector2(dirX * Ropespeed, rb.velocity.y);
             }
             else
             {
-                rb.AddRelativeForce(new Vector3(1, 0, 0) * Groundspeed * Time.deltaTime);
+                rb.velocity = new Vector2(dirX * Groundspeed, rb.velocity.y);
             }
         }
-        if (Input.GetKeyDown("w") && attached)
+        if (CrossPlatformInputManager.GetButtonDown("SlideUp") && attached)
         {
             Slide(1);
         }
-        if (Input.GetKeyDown("s") && attached)
+        if (CrossPlatformInputManager.GetButtonDown("SlideDown")&& attached)
         {
             Slide(-1);
         }
         if (CrossPlatformInputManager.GetButtonDown("Jump") && attached)
         {
-            rb.AddRelativeForce(new Vector3(0, RopeJumpForce, 0) * (Ropespeed) * Time.deltaTime);
+            rb.AddForce(Vector2.up * RopeJumpForce);
             Detach();
         }
         if(CrossPlatformInputManager.GetButtonDown("Jump") && !attached && isGrounded)
         {
-            rb.AddRelativeForce(new Vector3(0, GroundJumpForce, 0) * Groundspeed * Time.deltaTime);
+            rb.AddForce(Vector2.up * GroundJumpForce);
         }
     }
 
@@ -92,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
         hj.enabled = true;
         attached = true;
         attachedTo = ropeBone.gameObject.transform.parent;
+        anim.SetBool("attached", attached);
     }
 
     void Detach()
@@ -146,12 +158,18 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-/*        if(collision.gameObject.tag == "Rope2")
+        if (collision.gameObject.tag == "Rope2")
         {
-            Debug.Log(collision.gameObject);
-            this.transform.parent = collision.transform;
-            this.transform.position = transform.parent.position;
-        }*/
+            Attach(collision.gameObject.GetComponent<Rigidbody2D>());
+        }
+        if(collision.gameObject.tag == ("Runic"))
+        {
+            Runic++;
+        }
+        if (collision.gameObject.tag == ("BoomerRang"))
+        {
+            boomerRang++;
+        }
     }
 
     void CheckPulleyInputs()
@@ -196,5 +214,32 @@ public class PlayerMovement : MonoBehaviour
         {
             pulleySelected.GetComponent<Crank>().Rotate(-1);
         }
+    }
+
+    private void LateUpdate()
+    {
+        if (dirX < 0f && !facingRight)
+        {
+            Flip();
+        }
+        if (dirX > 0f && facingRight)
+        {
+            Flip();
+        }
+    }
+    public void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        facingRight = !facingRight;
+
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
+    public void LoadData()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        Runic = data.Runic;
+        boomerRang = data.boomerRang;
     }
 }
