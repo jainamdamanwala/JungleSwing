@@ -51,7 +51,10 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         SaveSystem.SavePlayer(this);
     }
-
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
     void CheckKeyboardInputs()
     {
         dirX = CrossPlatformInputManager.GetAxis("Horizontal");

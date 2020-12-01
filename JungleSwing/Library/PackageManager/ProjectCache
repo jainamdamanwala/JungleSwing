@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637419674994213796
-    m_Hash: 4071878295
+      ticks: 637423301825179090
+    m_Hash: 2111570157
   m_LockFileStatus:
     m_FilePath: E:/New Projects/Github/JungleSwing/JungleSwing/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637419808402203568
-    m_Hash: 462471490
+      ticks: 637423301836148814
+    m_Hash: 3868947034
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -834,6 +834,147 @@ m_PackageAssets:
         type: git
         url: git@github.com:Unity-Technologies/PostProcessing.git
         revision: e6de985c41f04a5fc7c7227dd67e3e73fac834e7
+        path: 
+    - packageId: com.unity.purchasing@2.1.1
+      testable: 0
+      isDirectDependency: 1
+      version: 2.1.1
+      source: 1
+      resolvedPath: E:\New Projects\Github\JungleSwing\JungleSwing\Library\PackageCache\com.unity.purchasing@2.1.1
+      assetPath: Packages/com.unity.purchasing
+      name: com.unity.purchasing
+      displayName: In App Purchasing
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Unity IAP supports the iOS, Mac, tvOS, Google Play, Facebook
+        Gameroom, Windows, Amazon, and Samsung Galaxy app stores. Additionally, it
+        can work in tandem with the Unity Distribution Portal in order to synchronize
+        catalogs and transactions with even more stores.
+
+
+        With Unity IAP,
+        setting up in-app purchases for your game across multiple app stores has
+        never been easier.
+
+
+        Use one common API to access all stores for
+        free. With just a few lines of code, you can fully understand and optimize
+        your in-game economy.
+
+
+        Unity IAP automatically couples with Unity
+        Analytics enabling you to monitor and act on trends in your revenue and purchase
+        data across multiple platforms.
+
+
+        Includes client-side receipt validation
+        for Apple App Store and Google Play.
+
+
+        After installing this package,
+        please make sure to open the Services Window and enable In-App Purchasing
+        to use its features. In the In-App Purchasing settings, please make sure
+        to import the Asset Store plugin if you have not already done so. This is
+        necessary to include all of the features.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.3
+        - 0.0.4
+        - 0.0.5
+        - 0.0.6
+        - 0.0.7
+        - 0.0.8
+        - 0.0.9
+        - 0.0.10
+        - 0.0.11
+        - 0.0.12
+        - 0.0.13
+        - 0.0.14
+        - 0.0.15
+        - 0.0.16
+        - 0.0.17
+        - 0.0.18
+        - 0.0.19
+        - 2.0.0
+        - 2.0.1
+        - 2.0.3
+        - 2.0.5
+        - 2.0.6
+        - 2.1.0
+        - 2.1.1
+        - 2.2.0
+        - 2.2.1
+        - 3.0.0-pre.3
+        - 3.0.0-pre.4
+        compatible:
+        - 0.0.3
+        - 0.0.4
+        - 0.0.5
+        - 0.0.6
+        - 0.0.7
+        - 0.0.8
+        - 0.0.9
+        - 0.0.10
+        - 0.0.11
+        - 0.0.12
+        - 0.0.13
+        - 0.0.14
+        - 0.0.15
+        - 0.0.16
+        - 0.0.17
+        - 0.0.18
+        - 0.0.19
+        - 2.0.0
+        - 2.0.1
+        - 2.0.3
+        - 2.0.5
+        - 2.0.6
+        - 2.1.0
+        - 2.1.1
+        - 2.2.0
+        - 2.2.1
+        - 3.0.0-pre.3
+        - 3.0.0-pre.4
+        verified: 2.1.1
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - purchasing
+      - iap
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637357776810000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.purchasing.git
+        revision: ab79b0c58006f61970a2136b4cba9ca76fde0edc
         path: 
     - packageId: com.unity.render-pipelines.universal@8.2.0
       testable: 0

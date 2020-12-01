@@ -8,6 +8,7 @@ public class Rope : MonoBehaviour
     public GameObject[] prefabsRopeSegments;
     public int numlinks = 5;
 
+
     public HingeJoint2D top;
 
     public PlayerMovement player;
